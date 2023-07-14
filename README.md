@@ -19,29 +19,44 @@ The project consisted of the following components:
 
 3. **ConditionalProbabilityTables (CPTs)**: Developed the CPTs class to store and manage the conditional probability tables associated with each node. The CPTs class handled probability calculations and data storage required for the Bayesian network.
 
-## Functionality
-
+Functionality
 The program followed the following workflow:
 
-1. **XML and Text Input**: Received an XML file specifying the relationships between objects and their probabilities. Additionally, a text file containing queries was provided to obtain the desired results.
+Input Files: Create an input.txt file with the following structure:
 
-2. **Dependency Graph Construction**: Utilized the CreateGraph class to parse the XML file and construct the dependency graph. The graph represented the relationships between the objects and their conditional dependencies.
+The first line should specify the path to the XML file. You can use one of the provided XML files or provide your own, as long as it follows the same format.
+Below the first line, write queries using the format P(<expression>). Use =T for true, =F for false, and | to denote conditional dependencies.
+After each query, specify the method to be used: ,1 for full probability calculation or ,2 for conditional probability calculation.
+Dependency Graph Construction: Run the program and provide the input.txt file as input.
 
-3. **Query Processing**: Read the queries from the text file and utilized string slicing techniques to extract relevant information. Built truth tables and CPTs to calculate the probabilities and provide the correct answers.
+The program will read the XML file specified in the first line of the input.txt file and construct the dependency graph based on the provided information.
+Query Processing: The program will process the queries specified in the input.txt file and calculate the probabilities using the specified method.
 
-4. **Output**: Generated the appropriate output based on the queries, presenting the calculated probabilities and results for the given dependencies.
-
-## Usage
-
+The output will include the result of each query and the number of additions and multiplications performed during the calculation.
+Usage
 To use the program, follow these steps:
 
-1. Prepare an XML file that specifies the relationships between objects and their probabilities.
-2. Create a text file containing the queries to be processed.
-3. Run the program, providing the XML file and the text file as inputs.
-4. The program will construct the dependency graph, process the queries, and output the results.
+Create an input.txt file with the following structure:
 
-## Conclusion
+<path_to_xml_file>
+<query_1>,<method_1>
+<query_2>,<method_2>
+<query_3>,<method_3>
+...
+Replace <path_to_xml_file> with the path to the XML file.
+Specify each query using the format P(<expression>).
+Use =T for true, =F for false, and | to denote conditional dependencies.
+After each query, specify the method to be used: ,1 for full probability calculation or ,2 for conditional probability calculation.
+Run the program and provide the input.txt file as input.
+  
+ ### OR use the current inputfile and xml files 
+  
+The program will read the XML file and construct the dependency graph.
+It will process the queries and provide the results, along with the number of additions and multiplications performed for each query.
+Conclusion
+This Bayesian network project successfully implemented a Java program capable of constructing a dependency graph from an XML file and processing queries. The program showcased the handling of conditional dependencies, string slicing techniques, and the construction of truth tables and conditional probability tables. By efficiently utilizing these techniques, the program provided accurate answers and optimized computational time.
 
+Please note that the project details and instructions are provided as a general outline. You can modify and customize the information according to your specific project requirements and specifications.
 This Bayesian network project successfully implemented a Java program capable of constructing a dependency graph from an XML file and processing queries. The program showcased the handling of conditional dependencies, string slicing techniques, and the construction of truth tables and conditional probability tables. By efficiently utilizing these techniques, the program provided accurate answers and optimized computational time.
 
 Please note that the project details and instructions are provided as a general outline. You can modify and customize the information according to your specific project requirements and specifications.
