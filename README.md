@@ -5,8 +5,6 @@ This project involved building a Bayesian network from scratch in Java. The goal
 ## Technologies Used
 
 - Java
-- bayesball
-- probabilitys
 - No standard packages were allowed and everything was built from scratch
 
 ## Project Overview
